@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Music Recommendation System</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <label class="theme-switch">
+        <input type="checkbox" id="modeToggle" onchange="toggleMode()">
+        <span class="slider round"></span>
+    </label>
+
+    <div class="container">
+        <h1>🎵 Music Recommendation System</h1>
+        <form id="recommendForm">
+            <label for="song">Select a Song:</label>
+            <input list="songList" id="song" name="song" required>
+            <datalist id="songList"></datalist>
+            <div class="button-group">
+                <button type="submit">Get Recommendations</button>
+                <button type="button" id="clearButton" style="display:none;">Clear Results</button>
+            </div>
+        </form>
+        <div class="loader" id="loader" style="display:none;"></div>
+        <div id="recommendations"></div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
