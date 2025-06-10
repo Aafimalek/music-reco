@@ -24,4 +24,4 @@ def recommend():
     return jsonify(results.to_dict(orient='index'))
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False,port=5000, host='0.0.0.0')
